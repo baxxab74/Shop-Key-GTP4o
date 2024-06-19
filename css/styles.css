@@ -1,0 +1,269 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 1024px; /* Установим ширину контейнера */
+    margin: 0 auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+}
+.horizontal-menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.horizontal-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Центрирование меню */
+}
+
+.horizontal-menu ul li {
+    margin: 0;
+}
+
+.horizontal-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: #333; /* Установим одинаковый цвет фона */
+}
+
+.horizontal-menu ul li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.language-switcher {
+    margin-left: auto;
+    color: white; /* Цвет текста для переключателя языка */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th, .product-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.product-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.product-table img {
+    max-width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.settings-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-buy {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: #218838;
+}
+/* Адаптивная стилизация */
+@media (max-width: 1024px) { /* Адаптируем для экранов шириной до 1024px */
+    .container {
+        width: 100%;
+        padding: 0 10px; /* Добавляем отступы */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .horizontal-menu ul {
+        justify-content: flex-start;
+    }
+
+    .language-switcher {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .product-table {
+        border: 0;
+    }
+
+    .product-table thead {
+        display: none;
+    }
+
+    .product-table tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .product-table td {
+        display: block;
+        text-align: right;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .product-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .product-table td:last-child {
+        border-bottom: 0;
+    }
+}
+/* Дополнительные стили для улучшения внешнего вида */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.header h1 {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
